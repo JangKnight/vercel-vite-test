@@ -8,7 +8,16 @@ function App() {
 
   return (
     <>
-      <h3>Hello, Anthony!</h3>
+      <div className="flex justify-center">
+        <h3> Hello, Anthony!</h3>
+      </div>
+      <div className="flex justify-center">
+        <img
+          src={heroImg}
+          alt="Hero"
+          className="w-full max-w-2xl rounded-lg shadow-lg"
+        />
+      </div>
     </>
   );
 }
