@@ -38,8 +38,10 @@ const About = () => {
             <div className="text-gray-600">Katas Completed</div>
           </div>
           <div className="text-center p-6 bg-blue-50 rounded-lg">
-            <div className="text-3xl font-semibold text-blue-600 mb-2">2</div>
-            <div className="text-gray-600">Personal Projects</div>
+            <div className="text-3xl font-semibold text-blue-600 mb-2">
+              100+
+            </div>
+            <div className="text-gray-600">Open Source Contributions</div>
           </div>
         </div>
       </div>
