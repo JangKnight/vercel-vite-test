@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import "./index.css";
 import Nav from "./Nav.tsx";
-import FetchProfile from "./Fetch-GH-Profile.tsx";
+import FetchGHProfile from "./Fetch-GH-Profile.tsx";
 import About from "./About.tsx";
 import Home from "./Home.tsx";
 //import App from "./App.tsx";
@@ -23,7 +23,7 @@ const router = createBrowserRouter([
     element: <Layout />,
     children: [
       { path: "/", element: <Home /> },
-      { path: "/github", element: <FetchProfile /> },
+      { path: "/github", element: <FetchGHProfile /> },
       { path: "/about", element: <About /> },
       {
         path: "/projects",

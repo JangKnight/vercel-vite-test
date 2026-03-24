@@ -21,10 +21,10 @@ const About = () => {
           </p>
 
           <p className="text-lg">
-            When I'm not coding, you'll find me working on personal projects,
-            solving coding challenges, or exploring new frameworks and tools. I
-            believe in continuous learning and sharing knowledge with the
-            developer community.
+            When I'm free, you'll find me working on personal or open source
+            projects, solving coding challenges, or exploring new frameworks and
+            tools. I believe in continuous learning and sharing knowledge with
+            the developer community.
           </p>
         </div>
 

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const FetchProfile = () => {
+const FetchGHProfile = () => {
   const changeUser = (form) => {
     form.preventDefault();
     const formData = new FormData(form.target);
@@ -74,4 +74,4 @@ const FetchProfile = () => {
     </>
   );
 };
-export default FetchProfile;
+export default FetchGHProfile;
