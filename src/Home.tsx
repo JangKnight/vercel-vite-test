@@ -2,6 +2,7 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "./assets/vite.svg";
 import heroImg from "./assets/me.jpeg";
+import Exp from "./Exp.tsx";
 
 function Home() {
   const [_count, _setCount] = useState(0);
@@ -29,6 +30,10 @@ function Home() {
           with clean, efficient code. Passionate about Python, TypeScript,
           React, and cloud architecture."
         </p>
+      </div>
+      <div className="mt-12 px-4">
+        <h2 className="text-3xl font-bold mb-6 text-center">My Journey</h2>
+        <Exp />
       </div>
     </>
   );

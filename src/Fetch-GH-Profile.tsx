@@ -52,7 +52,7 @@ const FetchProfile = () => {
           {profile ? `${profile.login}'s Profile` : "Fetch GH Profile"}
         </h2>
         {profile && (
-          <div className="grid grid-cols-1 gap-4 items-left">
+          <div className="flex flex-col gap-4 items-center">
             <a
               href={profile.html_url}
               target="_blank"
