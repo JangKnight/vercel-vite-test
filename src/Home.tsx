@@ -26,8 +26,8 @@ function Home() {
         <p className="block text-blue-600 text-2xl">Full-Stack Developer</p>
         <p className="text-lg text-center max-w-2xl">
           "I build scalable web applications and love solving complex problems
-          with clean, efficient code. Passionate about TypeScript, React, and
-          cloud architecture."
+          with clean, efficient code. Passionate about Python, TypeScript,
+          React, and cloud architecture."
         </p>
       </div>
     </>
