@@ -26,12 +26,12 @@ const router = createBrowserRouter([
       { path: "/", element: <Home /> },
       { path: "/github", element: <FetchGHProfile /> },
       { path: "/about", element: <About /> },
-      {
-        path: "/projects",
-        element: <div className="p-4">Projects Content</div>,
-      },
-      { path: "/chat", element: <Chat /> },
-      { path: "/chat/:room", element: <Chat /> },
+      // {
+      //   path: "/projects",
+      //   element: <div className="p-4">Projects Content</div>,
+      // },
+      // { path: "/chat", element: <Chat /> },
+      // { path: "/chat/:room", element: <Chat /> },
     ],
   },
 ]);

@@ -21,14 +21,14 @@ function Nav() {
           <Link to="/github" className="text-md hover:text-purple-400">
             GitHub
           </Link>
-          <span className="text-md">|</span>
+          {/* <span className="text-md">|</span>
           <Link to="/chat" className="text-md hover:text-purple-400">
             Chat
           </Link>
           <span className="text-md">|</span>
           <Link to="#" className="text-md cursor-not-allowed">
             <span className="line-through">Projects</span>(under construction)
-          </Link>
+          </Link> */}
         </div>
         {/*
         <div className="flex items-center space-x-4">
