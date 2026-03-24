@@ -9,7 +9,7 @@ const Chat = () => {
   const messagesEndRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    const ws = new WebSocket(`${import.meta.env.WS_URL}/ws/${room}`);
+    const ws = new WebSocket(`${import.meta.env.VITE_WS_URL}/ws/${room}`);
     wsRef.current = ws;
 
     ws.onmessage = (event) => {
