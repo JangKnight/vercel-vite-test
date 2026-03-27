@@ -5,7 +5,7 @@ const DemoHome = () => {
     <section className="py-12">
       <div className="mx-auto max-w-5xl rounded-[2rem] border border-white/10 bg-slate-900/70 p-8 shadow-2xl">
         <p className="text-sm uppercase tracking-[0.3em] text-cyan-300">
-          Portfolio Demo
+          All yours
         </p>
         <h2 className="mt-3 text-4xl font-semibold text-white">
           Build your own.
