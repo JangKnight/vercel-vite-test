@@ -1,7 +1,11 @@
 import { Link } from "react-router-dom";
-import { User, Menu } from "lucide-react";
+import { User } from "lucide-react";
+import { useAuth } from "./Auth.tsx";
 
 function Nav() {
+  const { isAuthenticated, logout, user } = useAuth();
+  const displayName = user?.name ?? user?.username ?? user?.email;
+
   return (
     <>
       <nav className="flex items-center justify-between p-4 bg-gray-800 text-white">
@@ -38,16 +42,27 @@ function Nav() {
             <span className="line-through">Projects</span>(refactoring)
           </Link> */}
         </div>
-        {/*
         <div className="flex items-center space-x-4">
-          <button className="px-4 py-2 bg-blue-500 rounded hover:bg-blue-600">
-            Login
-          </button>
-          <button className="px-4 py-2 bg-green-500 rounded hover:bg-green-600">
-            Sign Up
-          </button>
+          {isAuthenticated ? (
+            <>
+              <span className="text-sm text-gray-300">{displayName}</span>
+              <button
+                type="button"
+                onClick={logout}
+                className="px-4 py-2 bg-red-500 rounded hover:bg-red-600"
+              >
+                Logout
+              </button>
+            </>
+          ) : (
+            <Link
+              to="/demos/login"
+              className="px-4 py-2 bg-blue-500 rounded hover:bg-blue-600"
+            >
+              Login
+            </Link>
+          )}
         </div>
-          */}
       </nav>
       <hr />
     </>

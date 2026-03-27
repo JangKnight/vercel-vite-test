@@ -11,6 +11,7 @@ import Chat from "./Chat.tsx";
 import Demos from "./Demos.tsx";
 import Login from "./Login.tsx";
 import Signup from "./Signup.tsx";
+import { AuthProvider } from "./Auth.tsx";
 
 //import App from "./App.tsx";
 
@@ -34,10 +35,6 @@ const router = createBrowserRouter([
       { path: "/github", element: <FetchGHProfile /> },
       { path: "/blog", element: <Posts /> },
       { path: "/about", element: <About /> },
-      {
-        path: "/projects",
-        element: <div className="p-4">Projects Content</div>,
-      },
       { path: "/chat", element: <Chat /> },
       { path: "/chat/:room", element: <Chat /> },
       {
@@ -54,7 +51,9 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")!).render(
   <QueryClientProvider client={queryClient}>
-    <title>Anthony's Portfolio</title>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <title>Anthony's Portfolio</title>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </QueryClientProvider>,
 );
