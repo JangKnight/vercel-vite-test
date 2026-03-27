@@ -188,6 +188,9 @@ const Login = () => {
             Sign up
           </Link>
         </p>
+        <p className="mt-10 text-center text-sm/6 text-gray-400">
+          OR: Use test user -&gt; test / abc123
+        </p>
       </div>
     </div>
   );

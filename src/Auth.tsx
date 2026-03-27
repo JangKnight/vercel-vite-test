@@ -11,9 +11,11 @@ const AUTH_STORAGE_KEY = "portfolio-website-auth";
 type JwtPayload = Record<string, unknown>;
 
 export type AuthUser = {
+  id: number | null;
   username: string | null;
   email: string | null;
   name: string | null;
+  role: string | null;
 };
 
 type StoredAuth = {
@@ -45,6 +47,10 @@ const readString = (value: unknown): string | null => {
   return trimmed.length > 0 ? trimmed : null;
 };
 
+const readNumber = (value: unknown): number | null => {
+  return typeof value === "number" && Number.isFinite(value) ? value : null;
+};
+
 const normalizeStoredUser = (value: unknown): AuthUser | null => {
   if (!isRecord(value)) {
     return null;
@@ -53,15 +59,19 @@ const normalizeStoredUser = (value: unknown): AuthUser | null => {
   const username = readString(value.username);
   const email = readString(value.email);
   const name = readString(value.name);
+  const id = readNumber(value.id);
+  const role = readString(value.role);
 
-  if (!username && !email && !name) {
+  if (!id && !username && !email && !name && !role) {
     return null;
   }
 
   return {
+    id,
     username,
     email,
     name,
+    role,
   };
 };
 
@@ -101,23 +111,27 @@ const buildUser = (
   fallbackUser: Partial<AuthUser> = {},
 ): AuthUser | null => {
   const username =
-    readString(payload?.username) ??
     readString(payload?.preferred_username) ??
+    readString(payload?.username) ??
     readString(payload?.sub) ??
     fallbackUser.username ??
     null;
+  const id = readNumber(payload?.id) ?? fallbackUser.id ?? null;
   const email = readString(payload?.email) ?? fallbackUser.email ?? null;
   const name =
     readString(payload?.name) ?? fallbackUser.name ?? username ?? email;
+  const role = readString(payload?.role) ?? fallbackUser.role ?? null;
 
-  if (!username && !email && !name) {
+  if (!id && !username && !email && !name && !role) {
     return null;
   }
 
   return {
+    id,
     username,
     email,
     name,
+    role,
   };
 };
 

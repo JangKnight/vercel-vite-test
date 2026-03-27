@@ -8,9 +8,18 @@ import Posts from "./Posts.tsx";
 import About from "./About.tsx";
 import Home from "./Home.tsx";
 import Chat from "./Chat.tsx";
+import Notes from "./Notes.tsx";
 import Demos from "./Demos.tsx";
+import DemoHome from "./Demo-Home.tsx";
+import DemoAbout from "./Demo-About.tsx";
+import DemoBlog from "./Demo-Blog.tsx";
+import DemoUserAbout from "./Demo-User-About.tsx";
+import DemoUserPosts from "./Demo-User-Posts.tsx";
 import Login from "./Login.tsx";
 import Signup from "./Signup.tsx";
+import Admin from "./Admin.tsx";
+import AdminUsers from "./Admin-Users.tsx";
+import AdminPosts from "./Admin-Posts.tsx";
 import { AuthProvider } from "./Auth.tsx";
 
 //import App from "./App.tsx";
@@ -38,9 +47,24 @@ const router = createBrowserRouter([
       { path: "/chat", element: <Chat /> },
       { path: "/chat/:room", element: <Chat /> },
       {
+        path: "/admin",
+        element: <Admin />,
+        children: [
+          { index: true, element: <AdminUsers /> },
+          { path: "users", element: <AdminUsers /> },
+          { path: "posts", element: <AdminPosts /> },
+        ],
+      },
+      {
         path: "/demos",
         element: <Demos />,
         children: [
+          { index: true, element: <DemoHome /> },
+          { path: "about", element: <DemoAbout /> },
+          { path: "notes", element: <Notes /> },
+          { path: "blog", element: <DemoBlog /> },
+          { path: "user/:user_id/about", element: <DemoUserAbout /> },
+          { path: "user/:user_id/posts", element: <DemoUserPosts /> },
           { path: "login", element: <Login /> },
           { path: "signup", element: <Signup /> },
         ],

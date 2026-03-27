@@ -5,26 +5,40 @@ import { useAuth } from "./Auth.tsx";
 function Nav() {
   const { isAuthenticated, logout, user } = useAuth();
   const displayName = user?.name ?? user?.username ?? user?.email ?? "Guest";
+  const isAnthony = user?.role === "anthony";
+  const middleLinks = [
+    { to: "/demos/about", label: "About" },
+    { to: "/demos/notes", label: "Notes" },
+    { to: "/demos/blog", label: "Blog" },
+  ];
 
   return (
     <>
-      <nav className="flex items-center justify-between p-4 bg-gray-800 text-white">
+      <nav className="flex items-center justify-between gap-6 p-4 bg-gray-800 text-white">
         <div className="flex items-center gap-1">
           <User className="w-8 h-8 text-blue-600" />
-          <span className="text-xl font-semibold">{displayName}</span>
+          <span className="text-xl font-semibold">Your Space</span>
         </div>
 
-        {!isAuthenticated ? (
+        <div className="flex flex-1 items-center justify-center gap-4">
+          {middleLinks.map((link, index) => (
+            <div key={link.to} className="flex items-center gap-4">
+              {index > 0 ? <span className="text-md">|</span> : null}
+              <Link to={link.to} className="text-md hover:text-purple-400">
+                {link.label}
+              </Link>
+            </div>
+          ))}
+        </div>
+
+        {isAuthenticated ? (
           <div className="flex items-center space-x-4">
-            <Link
-              to="login"
-              className="text-md font-bold hover:text-purple-400"
-            >
-              Login
-            </Link>
-          </div>
-        ) : (
-          <div className="flex items-center space-x-4">
+            {isAnthony ? (
+              <Link to="/admin/users" className="text-md hover:text-purple-400">
+                Admin
+              </Link>
+            ) : null}
+            <span className="text-sm text-gray-300">{displayName}</span>
             <button
               type="button"
               onClick={logout}
@@ -32,6 +46,15 @@ function Nav() {
             >
               Logout
             </button>
+          </div>
+        ) : (
+          <div className="flex items-center space-x-4">
+            <Link to="/demos/login" className="text-md font-bold hover:text-purple-400">
+              Login
+            </Link>
+            <Link to="/demos/signup" className="text-md hover:text-purple-400">
+              Sign up
+            </Link>
           </div>
         )}
       </nav>
