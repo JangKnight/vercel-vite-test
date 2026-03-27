@@ -8,7 +8,8 @@ function Nav() {
     { to: "/blog", label: "Blog" },
     { to: "/github", label: "GitHub" },
     { to: "/chat", label: "Chat" },
-    { to: "/demos", label: "Demos" },
+    { to: "/spaces", label: "Spaces" },
+    { to: "/games", label: "Games" },
   ];
 
   return (

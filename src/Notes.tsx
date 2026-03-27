@@ -116,7 +116,7 @@ const Notes = () => {
             Sign in to create and manage your personal notes.
           </p>
           <Link
-            to="/demos/login"
+            to="/spaces/login"
             className="mt-8 inline-flex rounded-full bg-cyan-500 px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-400"
           >
             Go to login

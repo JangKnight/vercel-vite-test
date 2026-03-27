@@ -7,9 +7,9 @@ function Nav() {
   const displayName = user?.name ?? user?.username ?? user?.email ?? "Guest";
   const isAnthony = user?.role === "anthony";
   const middleLinks = [
-    { to: "/demos/about", label: "About" },
-    { to: "/demos/notes", label: "Notes" },
-    { to: "/demos/blog", label: "Blog" },
+    { to: "/spaces/about", label: "About" },
+    { to: "/spaces/notes", label: "Notes" },
+    { to: "/spaces/blog", label: "Blog" },
   ];
 
   return (
@@ -49,10 +49,13 @@ function Nav() {
           </div>
         ) : (
           <div className="flex items-center space-x-4">
-            <Link to="/demos/login" className="text-md font-bold hover:text-purple-400">
+            <Link
+              to="/spaces/login"
+              className="text-md font-bold hover:text-purple-400"
+            >
               Login
             </Link>
-            <Link to="/demos/signup" className="text-md hover:text-purple-400">
+            <Link to="/spaces/signup" className="text-md hover:text-purple-400">
               Sign up
             </Link>
           </div>

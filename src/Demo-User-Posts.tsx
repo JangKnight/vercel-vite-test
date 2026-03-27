@@ -42,7 +42,9 @@ const DemoUserPosts = () => {
     return (
       <section className="py-12">
         <div className="mx-auto max-w-3xl rounded-[2rem] border border-white/10 bg-slate-900/70 p-8 text-center shadow-2xl">
-          <h2 className="text-4xl font-semibold text-white">Public Demo Posts</h2>
+          <h2 className="text-4xl font-semibold text-white">
+            Public Demo Posts
+          </h2>
           <p className="mt-4 text-lg text-rose-300">Invalid user id.</p>
         </div>
       </section>
@@ -82,7 +84,7 @@ const DemoUserPosts = () => {
             @{profile.username}'s posts
           </h2>
           <Link
-            to={`/demos/user/${profile.id}/about`}
+            to={`/spaces/user/${profile.id}/about`}
             className="mt-5 inline-flex rounded-full border border-white/15 px-5 py-3 text-sm font-semibold text-slate-100 transition hover:border-cyan-400 hover:text-cyan-300"
           >
             View about
@@ -100,7 +102,9 @@ const DemoUserPosts = () => {
                 key={post.id}
                 className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-2xl"
               >
-                <h3 className="text-2xl font-semibold text-white">{post.title}</h3>
+                <h3 className="text-2xl font-semibold text-white">
+                  {post.title}
+                </h3>
                 <p className="mt-4 whitespace-pre-wrap text-slate-300">
                   {post.content || "No content yet."}
                 </p>

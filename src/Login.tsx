@@ -79,7 +79,7 @@ const Login = () => {
     },
     onSuccess: ({ token, username }) => {
       login(token, { username });
-      navigate("/demos");
+      navigate("/spaces");
     },
   });
 
@@ -182,7 +182,7 @@ const Login = () => {
         <p className="mt-10 text-center text-sm/6 text-gray-400">
           Not a member?{" "}
           <Link
-            to="/demos/signup"
+            to="/spaces/signup"
             className="font-semibold text-indigo-400 hover:text-indigo-300"
           >
             Sign up

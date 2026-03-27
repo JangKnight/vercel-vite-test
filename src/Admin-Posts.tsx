@@ -104,7 +104,7 @@ const AdminPosts = () => {
                       </span>
                       {post.owner_id ? (
                         <Link
-                          to={`/demos/user/${post.owner_id}/posts`}
+                          to={`/spaces/user/${post.owner_id}/posts`}
                           className="rounded-full border border-white/10 px-4 py-2 transition hover:border-cyan-400 hover:text-cyan-300"
                         >
                           View owner's posts

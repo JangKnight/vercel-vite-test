@@ -70,7 +70,7 @@ const DemoUserAbout = () => {
         </h2>
         <div className="mt-6 flex flex-wrap gap-3 text-sm text-slate-300">
           <Link
-            to={`/demos/user/${profile.id}/posts`}
+            to={`/spaces/user/${profile.id}/posts`}
             className="rounded-full border border-white/10 px-4 py-2 transition hover:border-cyan-400 hover:text-cyan-300"
           >
             View posts

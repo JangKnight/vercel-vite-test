@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
 import DemoNav from "./Demo-Nav.tsx";
 
-const Demos = () => {
+const Spaces = () => {
   return (
     <div className="py-20 px-4 sm:px-6 lg:px-8">
       <DemoNav />
@@ -10,4 +10,4 @@ const Demos = () => {
   );
 };
 
-export default Demos;
+export default Spaces;

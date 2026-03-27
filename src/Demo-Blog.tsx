@@ -125,7 +125,7 @@ const DemoBlog = () => {
             Sign in to create posts for your blog.
           </p>
           <Link
-            to="/demos/login"
+            to="/spaces/login"
             className="mt-8 inline-flex rounded-full bg-cyan-500 px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-400"
           >
             Go to login
@@ -154,10 +154,10 @@ const DemoBlog = () => {
           </h2>
           {user?.id ? (
             <Link
-              to={`/demos/user/${user.id}/posts`}
+              to={`/spaces/user/${user.id}/posts`}
               className="mt-5 inline-flex rounded-full border border-white/15 px-5 py-3 text-sm font-semibold text-slate-100 transition hover:border-cyan-400 hover:text-cyan-300"
             >
-              View your public demo posts
+              Public view
             </Link>
           ) : null}
         </div>

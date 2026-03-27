@@ -8,8 +8,9 @@ import Posts from "./Posts.tsx";
 import About from "./About.tsx";
 import Home from "./Home.tsx";
 import Chat from "./Chat.tsx";
+import Games from "./Games.tsx";
 import Notes from "./Notes.tsx";
-import Demos from "./Demos.tsx";
+import Spaces from "./Spaces.tsx";
 import DemoHome from "./Demo-Home.tsx";
 import DemoAbout from "./Demo-About.tsx";
 import DemoBlog from "./Demo-Blog.tsx";
@@ -46,6 +47,7 @@ const router = createBrowserRouter([
       { path: "/about", element: <About /> },
       { path: "/chat", element: <Chat /> },
       { path: "/chat/:room", element: <Chat /> },
+      { path: "/games", element: <Games /> },
       {
         path: "/admin",
         element: <Admin />,
@@ -56,8 +58,8 @@ const router = createBrowserRouter([
         ],
       },
       {
-        path: "/demos",
-        element: <Demos />,
+        path: "/spaces",
+        element: <Spaces />,
         children: [
           { index: true, element: <DemoHome /> },
           { path: "about", element: <DemoAbout /> },

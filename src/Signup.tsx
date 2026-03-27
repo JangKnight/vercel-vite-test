@@ -55,10 +55,12 @@ const Signup = () => {
 
       if (response.ok) {
         console.log("Signup successful:", result);
-        navigate("/demos/login"); // Redirect to login page after successful signup
+        navigate("/spaces/login"); // Redirect to login page after successful signup
       } else {
         console.error("Signup failed:", result);
-        alert(`Signup failed: ${extractErrorMessage(result, "Signup failed.")}`);
+        alert(
+          `Signup failed: ${extractErrorMessage(result, "Signup failed.")}`,
+        );
       }
     } catch (error) {
       console.error("Network error:", error);
@@ -145,7 +147,7 @@ const Signup = () => {
         <p className="mt-10 text-center text-sm/6 text-gray-400">
           Already a member?{" "}
           <Link
-            to="/demos/login"
+            to="/spaces/login"
             className="font-semibold text-indigo-400 hover:text-indigo-300"
           >
             Sign in

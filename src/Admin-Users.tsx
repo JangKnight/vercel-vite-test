@@ -104,7 +104,7 @@ const AdminUsers = () => {
                       id: {entry.id}
                     </span>
                     <Link
-                      to={`/demos/user/${entry.id}/about`}
+                      to={`/spaces/user/${entry.id}/about`}
                       className="rounded-full border border-white/10 px-4 py-2 transition hover:border-cyan-400 hover:text-cyan-300"
                     >
                       View owner's bio

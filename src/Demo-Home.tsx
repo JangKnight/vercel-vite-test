@@ -17,19 +17,19 @@ const DemoHome = () => {
 
         <div className="mt-8 flex flex-wrap gap-4">
           <Link
-            to="/demos/about"
+            to="/spaces/about"
             className="rounded-full border border-white/15 px-5 py-3 text-sm font-semibold text-slate-100 transition hover:border-cyan-400 hover:text-cyan-300"
           >
             About
           </Link>
           <Link
-            to="/demos/notes"
+            to="/spaces/notes"
             className="rounded-full border border-white/15 px-5 py-3 text-sm font-semibold text-slate-100 transition hover:border-cyan-400 hover:text-cyan-300"
           >
             Notes
           </Link>
           <Link
-            to="/demos/blog"
+            to="/spaces/blog"
             className="rounded-full border border-white/15 px-5 py-3 text-sm font-semibold text-slate-100 transition hover:border-cyan-400 hover:text-cyan-300"
           >
             Blog
