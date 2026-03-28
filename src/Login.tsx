@@ -191,10 +191,6 @@ const Login = () => {
         <p className="mt-10 text-center text-sm/6 text-gray-400">
           OR: Use test user -&gt; test / abc123
         </p>
-        <p className="mt-10 text-center text-sm/6 text-gray-400">
-          NOTE: I'm using free tiers, so if fetch fails, it might be because the
-          server is asleep. Please just try again.
-        </p>
       </div>
     </div>
   );
