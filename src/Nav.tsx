@@ -9,7 +9,7 @@ function Nav() {
     { to: "/github", label: "GitHub" },
     { to: "/chat", label: "Chat" },
     { to: "/spaces", label: "Spaces" },
-    { to: "/games", label: "Games" },
+    { to: "/arcade", label: "Arcade" },
   ];
 
   return (
