@@ -24,7 +24,9 @@ function Home() {
             className="w-32 h-32 rounded-full shadow-lg"
           />
         </a>
-        <p className="block text-purple-500 text-2xl">Full-Stack Developer</p>
+        <p className="block text-purple-500 text-2xl">
+          Software and Security Engineer
+        </p>
         <p className="text-lg text-center max-w-2xl">
           "I build scalable web applications and love solving complex problems
           with clean, efficient code. Passionate about Python, TypeScript,
