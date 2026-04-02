@@ -22,6 +22,7 @@ import Admin from "./Admin.tsx";
 import AdminUsers from "./Admin-Users.tsx";
 import AdminPosts from "./Admin-Posts.tsx";
 import { AuthProvider } from "./Auth.tsx";
+import NotFound from "./Not-Found.tsx";
 
 //import App from "./App.tsx";
 
@@ -71,6 +72,7 @@ const router = createBrowserRouter([
           { path: "signup", element: <Signup /> },
         ],
       },
+      { path: "*", element: <NotFound /> },
     ],
   },
 ]);
