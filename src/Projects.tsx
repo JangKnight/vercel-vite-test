@@ -18,7 +18,7 @@ const Projects = () => {
           Projects &amp; WIPs
         </h2>
 
-        <div className="grid gap-6 sm:grid-cols-2">
+        <div className="grid gap-6">
           {projects.map((project, idx) => (
             <div
               key={idx}
