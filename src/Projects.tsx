@@ -1,33 +1,64 @@
-{
-  /* I have a new WIP that uses gemini for a chatbox. the app is called go bank. 
-    I'm still creating services, but right now, the highlight is the chatbot that a person can use to "help navigate the site and more".
-    The website is located @ bank.anthonysjhenry.net. I simply want to create a projects/wip page to showcase this work. */
-}
-import { Link } from "react-router-dom";
-
 const Projects = () => {
+  const projects = [
+    {
+      title: "Go Bank",
+      subtitle: "Gemini-powered chatbot banking assistant",
+      description:
+        "A personal project showcasing a chatbot that helps users navigate the site and more.",
+      url: "https://bank.anthonysjhenry.net",
+      tags: ["Go", "React", "Gemini AI", "PostgreSQL"],
+      status: "Live",
+    },
+  ];
+
   return (
-    <div className="flex items-center justify-center min-h-screen">
-      <div className="bg-white shadow-xl rounded-2xl w-full max-w-md p-6 sm:p-8">
-        <h2 className="text-2xl font-extrabold text-center text-gray-700! mb-6">
-          Projects & WIPs
+    <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-4xl mx-auto">
+        <h2 className="text-4xl md:text-5xl mb-8 text-center">
+          Projects &amp; WIPs
         </h2>
-        <ul className="list-disc list-inside space-y-4 text-gray-600">
-          <li>
-            <Link
-              to="https://bank.anthonysjhenry.net"
-              className="text-blue-500 hover:underline"
+
+        <div className="grid gap-6 sm:grid-cols-2">
+          {projects.map((project, idx) => (
+            <div
+              key={idx}
+              className="bg-blue-50 rounded-lg p-6 flex flex-col gap-3"
             >
-              Go Bank - A Gemini-powered chatbot banking assistant
-            </Link>
-            <p className="text-sm text-gray-500 mt-1">
-              A personal project showcasing a chatbot that helps users navigate
-              the site and more.
-            </p>
-          </li>
-        </ul>
+              <div className="flex items-center justify-between">
+                <h3 className="text-xl font-semibold text-blue-600">
+                  {project.title}
+                </h3>
+                <span className="text-xs font-medium text-green-600 bg-green-100 px-2 py-0.5 rounded-full">
+                  {project.status}
+                </span>
+              </div>
+              <p className="text-sm font-medium text-purple-500">
+                {project.subtitle}
+              </p>
+              <p className="text-gray-600 text-sm">{project.description}</p>
+              <div className="flex flex-wrap gap-2 mt-1">
+                {project.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="text-xs bg-white border border-gray-200 text-gray-500 px-2 py-0.5 rounded"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+              <a
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-auto text-sm text-blue-500 hover:underline"
+              >
+                Visit project →
+              </a>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
